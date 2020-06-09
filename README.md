@@ -11,7 +11,7 @@ To check if they are installed run the following commands in a terminal.
 
 ## Installation
 
-Clone this repository to your desired directory by runing `git clone https://git.chalmers.se/lari.kovanen/excel-combiner.git` in the terminal.  
+Clone this repository to your desired directory by runing `git clone https://github.com/ChalmersLibrary/excel-combiner.git` in the terminal.  
 Change directory to the cloned repository with `cd excel-combiner` and run `npm i` to install required libraries.
 
 ## Running the application
