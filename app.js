@@ -41,7 +41,7 @@ const uniqueRows = [
 var newWB = xlsx.utils.book_new();
 var newWS = xlsx.utils.json_to_sheet(uniqueRows);
 
-var targetFile = path.join(sourceDir, "sammanslagen.xlsx");
+var targetFile = path.join(sourceDir, "combined.xlsx");
 
-xlsx.utils.book_append_sheet(newWB, newWS, "Sammanslaget");
+xlsx.utils.book_append_sheet(newWB, newWS, "Combined");
 xlsx.writeFile(newWB, targetFile);
