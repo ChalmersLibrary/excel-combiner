@@ -1,8 +1,14 @@
+#! /usr/bin/env node
 const xlsx = require("xlsx");
 const fs = require("fs");
 const path = require("path");
 
 const sourceDir = process.argv[2];
+if (!sourceDir) {
+  console.log("You need to specify your source directory.");
+  process.exit(1);
+}
+console.log(`SourceDir is ${sourceDir}`);
 
 function readFileToJson(filename) {
   var wb = xlsx.readFile(filename);
@@ -12,27 +18,19 @@ function readFileToJson(filename) {
   return data;
 }
 
-console.log(`Dir is ${sourceDir}`);
-
 var targetDir = path.join(sourceDir);
 var files = fs.readdirSync(targetDir);
-
-console.log(files);
-
-console.log("Listing paths");
 
 var combinedData = [];
 
 files.forEach(function (file) {
   var fileExt = path.parse(file).ext;
   if (fileExt === ".xlsx" && file[0] !== "~") {
+    console.log(`Reading ${file}`);
     var data = readFileToJson(path.join(sourceDir, file));
     combinedData = combinedData.concat(data);
-    // console.log(data);
   }
 });
-
-console.log(combinedData.length);
 
 const uniqueRows = [
   ...new Set(combinedData.map((obj) => JSON.stringify(obj))),
@@ -44,4 +42,6 @@ var newWS = xlsx.utils.json_to_sheet(uniqueRows);
 var targetFile = path.join(sourceDir, "combined.xlsx");
 
 xlsx.utils.book_append_sheet(newWB, newWS, "Combined");
+console.log(`Writing ${targetFile}`);
 xlsx.writeFile(newWB, targetFile);
+console.log("Done.");
