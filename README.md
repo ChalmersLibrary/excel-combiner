@@ -15,7 +15,7 @@ Run `npm i -g @larkov/excel-combiner` in a terminal.
 
 ### Usage
 
-Run `excel-combiner [path]` in your terminal where you replace `[path]` to the directory containing your excel files' It will output a `combined.xlsx` file in the same directory.
+Run `excel-combiner [path]` in your terminal where you replace `[path]` to the directory containing your excel files. It will output a `combined.xlsx` file in the same directory.
 
 ## Development
 
