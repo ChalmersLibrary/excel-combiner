@@ -7,7 +7,7 @@ Combine first worksheet of many excel files in a directory to one.
 
 ### Prerequisities
 
-You need [nodejs](nodejs.org) installed on your machine.
+You need [nodejs](//nodejs.org) installed on your machine.
 
 ### Command installtion
 
@@ -21,7 +21,7 @@ Run `excel-combiner [path]` in your terminal where you replace `[path]` to the d
 
 ### Prerequesities
 
-You need [git](git-scm.org) and [nodejs](nodejs.org) installed on your machine.  
+You need [git](//git-scm.org) and [nodejs](//nodejs.org) installed on your machine.  
 To check if they are installed run the following commands in a terminal.  
 `git --version` to see if git is installed.  
 `node --version` to see if node is installed.
