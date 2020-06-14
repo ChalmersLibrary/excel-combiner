@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.chalmers.se:lari.kovanen/excel-combiner.git"
+    "url": "git@github.com:ChalmersLibrary/excel-combiner.git"
   },
   "author": "Lari Kovanen",
   "license": "MIT",
