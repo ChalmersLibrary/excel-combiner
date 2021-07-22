@@ -16,6 +16,6 @@
   "author": "Lari Kovanen",
   "license": "MIT",
   "dependencies": {
-    "xlsx": "^0.16.2"
+    "xlsx": "^0.17.0"
   }
 }
