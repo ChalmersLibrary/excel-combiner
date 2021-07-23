@@ -1,6 +1,6 @@
 {
   "name": "@larkov/excel-combiner",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Combine first worksheet of many excel files in a directory to one",
   "main": "app.js",
   "scripts": {
